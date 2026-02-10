@@ -1,0 +1,12 @@
+{
+  "name": "anitha-eudulla-portfolio",
+  "version": "1.0.0",
+  "description": "Professional AI & Data Science Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anitha Eudulla",
+  "license": "ISC"
+}
