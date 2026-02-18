@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anitha Eudulla | Entry-level Data Scientist</title>
+    <title>Anitha Eudulla | Data Scientist & AI Engineer</title>
     <meta name="description"
-        content="Entry-level Data Scientist specializing in AI, Machine Learning, and NLP. Helping businesses make data-driven decisions.">
+        content="Anitha Eudulla — Entry-level Data Scientist specializing in AI, Machine Learning, NLP, and Business Intelligence. Based in Hyderabad, India.">
+    <meta name="keywords" content="Data Scientist, AI, Machine Learning, NLP, Power BI, Hyderabad, Portfolio">
+    <meta name="author" content="Anitha Eudulla">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Anitha Eudulla | Data Scientist Portfolio">
+    <meta property="og:description" content="Entry-level Data Scientist specializing in AI, ML, and NLP.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anithaeudulla.github.io/">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -19,74 +27,142 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="dark">
-    <!-- Theme Toggle -->
-    <div class="theme-toggle" id="theme-toggle">
-        <i data-lucide="sun" class="sun-icon"></i>
-        <i data-lucide="moon" class="moon-icon"></i>
-    </div>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
 
     <!-- Navigation -->
-    <nav class="glass-nav">
+    <nav class="glass-nav" id="nav">
         <div class="container nav-content">
-            <a href="#" class="logo">ANITHA<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <a href="#" class="logo">
+                <span class="logo-bracket">&lt;</span>AE<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-right">
+                <a href="#contact" class="btn btn-nav">Hire Me</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
-            <div class="hero-glow"></div>
             <div class="container">
                 <div class="hero-content">
-                    <p class="hero-subtitle">Available for Opportunities</p>
-                    <h1 class="hero-title">Anitha Eudulla</h1>
-                    <p class="hero-role">Entry-level Data Scientist & Data Analyst</p>
-                    <p class="hero-tagline">Architecting intelligent systems through <strong>AI, Machine Learning, and
-                            Advanced Analytics</strong> to solve complex business challenges.</p>
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Available for Opportunities
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Anitha Eudulla</span>
+                    </h1>
+                    <p class="hero-role">
+                        <span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
+                    </p>
+                    <div class="hero-contact-links">
+                        <a href="mailto:anithaeudulla@gmail.com" class="hero-contact-item" aria-label="Email">
+                            <i data-lucide="mail"></i> anithaeudulla@gmail.com
+                        </a>
+                        <span class="hero-contact-sep">•</span>
+                        <a href="https://www.linkedin.com/in/anitha-eudulla/" target="_blank" class="hero-contact-item"
+                            aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i> LinkedIn
+                        </a>
+                        <span class="hero-contact-sep">•</span>
+                        <a href="https://github.com/AnithaEudulla" target="_blank" class="hero-contact-item"
+                            aria-label="GitHub">
+                            <i data-lucide="github"></i> GitHub
+                        </a>
+                    </div>
+                    <p class="hero-tagline">I architect intelligent systems through <strong>AI, Machine Learning,
+                            and Advanced Analytics</strong> — turning raw data into business impact.</p>
                     <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">View Portfolio</a>
-                        <a href="#contact" class="btn btn-outline">Let's Connect</a>
+                        <a href="#projects" class="btn btn-primary">
+                            <i data-lucide="folder-open"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i data-lucide="send"></i> Let's Connect
+                        </a>
+                    </div>
+                    <div class="hero-metrics">
+                        <div class="metric">
+                            <span class="metric-value">6+</span>
+                            <span class="metric-label">Projects</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric">
+                            <span class="metric-value">3+</span>
+                            <span class="metric-label">Certifications</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric">
+                            <span class="metric-value">AI/ML</span>
+                            <span class="metric-label">Focus Area</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about-section section">
+        <section id="about" class="section">
             <div class="container">
                 <div class="section-header">
+                    <span class="section-tag">About Me</span>
                     <h2 class="section-title">Professional Summary</h2>
-                    <div class="section-underline"></div>
                 </div>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>I am an <strong>Entry-level Data Scientist and Data Analyst</strong> with a strong foundation
-                            in transforming complex data into meaningful business insights. Proficient in <strong>SQL,
-                                Python, Power BI, and Excel</strong>, I specialize in analyzing, visualizing, and
-                            modeling data to support data-driven decision-making.</p>
-                        <p>With hands-on experience in <strong>Machine Learning, Deep Learning, and Natural Language
-                                Processing (NLP)</strong>, I contribute to the end-to-end development of data
-                            solutions—from data cleaning and exploratory analysis to building predictive models and
-                            interactive dashboards—while continuously striving to deliver accurate, scalable, and
-                            impactful results.</p>
+                        <p>I am an <strong>Entry-level Data Scientist and Data Analyst</strong> with a strong
+                            foundation in transforming complex data into meaningful business insights. Proficient
+                            in <strong>SQL, Python, Power BI, and Excel</strong>, I specialize in analyzing,
+                            visualizing, and modeling data to support data-driven decision-making.</p>
+                        <p>With hands-on experience in <strong>Machine Learning, Deep Learning, and Natural
+                                Language Processing (NLP)</strong>, I contribute to the end-to-end development of
+                            data solutions—from data cleaning and exploratory analysis to building predictive
+                            models and interactive dashboards—while continuously striving to deliver accurate,
+                            scalable, and impactful results.</p>
                     </div>
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <h3 class="stat-number">AI & ML</h3>
-                            <p class="stat-label">Model Development</p>
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <div class="about-card-icon"><i data-lucide="brain"></i></div>
+                            <h3>AI & Machine Learning</h3>
+                            <p>Model Development & Optimization</p>
                         </div>
-                        <div class="stat-card">
-                            <h3 class="stat-number">Data Science</h3>
-                            <p class="stat-label">NLP & Analytics</p>
+                        <div class="about-card">
+                            <div class="about-card-icon"><i data-lucide="bar-chart-2"></i></div>
+                            <h3>Business Intelligence</h3>
+                            <p>Dashboards & Data Storytelling</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-icon"><i data-lucide="message-square"></i></div>
+                            <h3>NLP & Deep Learning</h3>
+                            <p>Text Analytics & Language Models</p>
                         </div>
                     </div>
                 </div>
@@ -94,11 +170,11 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="skills-section section">
+        <section id="skills" class="section">
             <div class="container">
                 <div class="section-header">
+                    <span class="section-tag">What I Know</span>
                     <h2 class="section-title">Technical Expertise</h2>
-                    <div class="section-underline"></div>
                 </div>
                 <div class="skills-grid" id="skills-grid">
                     <!-- Dynamic Content -->
@@ -107,11 +183,11 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="experience-section section">
+        <section id="experience" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Experience</h2>
-                    <div class="section-underline"></div>
+                    <span class="section-tag">My Journey</span>
+                    <h2 class="section-title">Work Experience</h2>
                 </div>
                 <div class="timeline" id="experience-timeline">
                     <!-- Dynamic Content -->
@@ -120,11 +196,11 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects-section section">
+        <section id="projects" class="section">
             <div class="container">
                 <div class="section-header">
+                    <span class="section-tag">My Work</span>
                     <h2 class="section-title">Featured Projects</h2>
-                    <div class="section-underline"></div>
                 </div>
                 <div class="projects-grid" id="projects-grid">
                     <!-- Dynamic Content -->
@@ -132,26 +208,31 @@
             </div>
         </section>
 
-        <!-- Certifications & Education -->
-        <section id="education" class="education-section section">
+        <!-- Education & Certifications -->
+        <section id="education" class="section">
             <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Credentials</span>
+                    <h2 class="section-title">Education & Certifications</h2>
+                </div>
                 <div class="edu-cert-grid">
-                    <div class="education-column">
-                        <h3 class="column-title">Education</h3>
-                        <div class="edu-card">
-                            <div class="edu-icon"><i data-lucide="graduation-cap"></i></div>
-                            <div class="edu-info">
-                                <h4>B.Tech in Computer Science Engineering</h4>
-                                <p class="edu-inst">RITW Hyderabad</p>
-                            </div>
+                    <div class="edu-card glass-card">
+                        <div class="edu-card-header">
+                            <div class="edu-icon-wrap"><i data-lucide="graduation-cap"></i></div>
+                            <span class="edu-label">Education</span>
                         </div>
+                        <h3>B.Tech in Computer Science Engineering</h3>
+                        <p class="edu-inst">RITW Hyderabad</p>
                     </div>
-                    <div class="certifications-column">
-                        <h3 class="column-title">Certifications</h3>
+                    <div class="cert-card glass-card">
+                        <div class="edu-card-header">
+                            <div class="edu-icon-wrap"><i data-lucide="award"></i></div>
+                            <span class="edu-label">Certifications</span>
+                        </div>
                         <ul class="cert-list">
-                            <li><i data-lucide="check-circle"></i> Sunny Portal Certificate</li>
-                            <li><i data-lucide="check-circle"></i> NASSCOM Certificate</li>
-                            <li><i data-lucide="check-circle"></i> 360DigiTMG AI Course Certificate</li>
+                            <li><i data-lucide="check-circle-2"></i> Sunny Portal Certificate</li>
+                            <li><i data-lucide="check-circle-2"></i> NASSCOM Certificate</li>
+                            <li><i data-lucide="check-circle-2"></i> 360DigiTMG AI Course Certificate</li>
                         </ul>
                     </div>
                 </div>
@@ -159,44 +240,74 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section section">
+        <section id="contact" class="section">
             <div class="container">
                 <div class="section-header">
+                    <span class="section-tag">Let's Talk</span>
                     <h2 class="section-title">Get In Touch</h2>
-                    <div class="section-underline"></div>
                 </div>
                 <div class="contact-grid">
-                    <div class="contact-card">
-                        <p class="contact-desc">I'm always open to discussing new projects, creative ideas or
-                            opportunities to be part of your visions.</p>
-                        <div class="contact-methods"
-                            style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
-                            <div class="contact-item" style="display: flex; align-items: center; gap: 1rem;">
-                                <i data-lucide="mail" style="color: var(--accent-primary);"></i>
-                                <span>anithaeudulla@gmail.com</span>
+                    <div class="contact-info glass-card">
+                        <h3>Let's build something great together.</h3>
+                        <p class="contact-desc">I'm always open to discussing new projects, creative ideas, or
+                            opportunities to be part of your vision.</p>
+                        <div class="contact-methods">
+                            <a href="mailto:anithaeudulla@gmail.com" class="contact-method">
+                                <div class="contact-method-icon"><i data-lucide="mail"></i></div>
+                                <div>
+                                    <span class="contact-method-label">Email</span>
+                                    <span class="contact-method-value">anithaeudulla@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/anitha-eudulla/" target="_blank"
+                                class="contact-method">
+                                <div class="contact-method-icon"><i data-lucide="linkedin"></i></div>
+                                <div>
+                                    <span class="contact-method-label">LinkedIn</span>
+                                    <span class="contact-method-value">Anitha Eudulla</span>
+                                </div>
+                            </a>
+                            <a href="https://github.com/AnithaEudulla" target="_blank" class="contact-method">
+                                <div class="contact-method-icon"><i data-lucide="github"></i></div>
+                                <div>
+                                    <span class="contact-method-label">GitHub</span>
+                                    <span class="contact-method-value">AnithaEudulla</span>
+                                </div>
+                            </a>
+                            <div class="contact-method">
+                                <div class="contact-method-icon"><i data-lucide="phone"></i></div>
+                                <div>
+                                    <span class="contact-method-label">Phone</span>
+                                    <span class="contact-method-value">+91 9390857402</span>
+                                </div>
                             </div>
-                            <div class="contact-item" style="display: flex; align-items: center; gap: 1rem;">
-                                <i data-lucide="phone" style="color: var(--accent-primary);"></i>
-                                <span>+91 9390857402</span>
-                            </div>
-                            <div class="contact-item" style="display: flex; align-items: center; gap: 1rem;">
-                                <i data-lucide="map-pin" style="color: var(--accent-primary);"></i>
-                                <span>Hyderabad, India</span>
+                            <div class="contact-method">
+                                <div class="contact-method-icon"><i data-lucide="map-pin"></i></div>
+                                <div>
+                                    <span class="contact-method-label">Location</span>
+                                    <span class="contact-method-value">Hyderabad, India</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="contact-form-container">
+                    <div class="contact-form-wrap glass-card">
                         <form id="contact-form" class="contact-form">
                             <div class="form-group">
-                                <input type="text" placeholder="Name" required>
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Your name" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Email" required>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="you@example.com" required>
                             </div>
                             <div class="form-group">
-                                <textarea placeholder="Message" rows="5" required></textarea>
+                                <label for="message">Message</label>
+                                <textarea id="message" placeholder="Tell me about your project..." rows="5"
+                                    required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i data-lucide="send"></i> Send Message
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -206,10 +317,26 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Anitha Eudulla. All rights reserved.</p>
-            <p style="color: var(--accent-primary); margin-top: 0.5rem;">Designed by Anitha Eudulla</p>
+            <div class="footer-content">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-bracket">&lt;</span>AE<span class="logo-bracket">/&gt;</span>
+                </a>
+                <div class="footer-socials">
+                    <a href="mailto:anithaeudulla@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+                    <a href="https://www.linkedin.com/in/anitha-eudulla/" target="_blank" aria-label="LinkedIn"><i
+                            data-lucide="linkedin"></i></a>
+                    <a href="https://github.com/AnithaEudulla" target="_blank" aria-label="GitHub"><i
+                            data-lucide="github"></i></a>
+                </div>
+                <p class="footer-copy">&copy; Anitha Eudulla. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
     <script>
