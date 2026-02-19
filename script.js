@@ -62,6 +62,16 @@ const experience = [
 
 const projects = [
     {
+        title: "Telecom Churn App",
+        problem: "Telecommunication companies struggle to identify customers likely to leave, leading to revenue loss.",
+        solution: "Developed an end-to-end churn prediction application using XGBoost and Streamlit to classify at-risk customers.",
+        tools: ["Python", "XGBoost", "Streamlit", "Scikit-Learn"],
+        results: "Achieved ~82% accuracy with the final XGBoost model, outperforming other classifiers.",
+        image: "https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&q=80&w=800",
+        liveLink: "#",
+        github: "https://github.com/anithaeudulla/telecom-churn_app"
+    },
+    {
         title: "Sales Performance Dashboard",
         problem: "Management lacked a real-time, interactive view of sales trends and customer behavior across regions.",
         solution: "Built a comprehensive Power BI dashboard featuring MoM growth tracking, DAX-driven KPIs, and segment contribution analysis.",
