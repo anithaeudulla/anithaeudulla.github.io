@@ -4,52 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anitha Eudulla | Data Scientist & AI Engineer</title>
+    <title>Anitha Eudulla | Data Scientist & AI Engineer — Portfolio</title>
     <meta name="description"
-        content="Anitha Eudulla — Entry-level Data Scientist specializing in AI, Machine Learning, NLP, and Business Intelligence. Based in Hyderabad, India.">
-    <meta name="keywords" content="Data Scientist, AI, Machine Learning, NLP, Power BI, Hyderabad, Portfolio">
+        content="Anitha Eudulla — Data Scientist & AI Engineer specializing in Machine Learning, Predictive Analytics, NLP, and Business Intelligence. Hyderabad, India.">
+    <meta name="keywords"
+        content="Data Scientist, Data Analyst, AI Engineer, Machine Learning, NLP, Power BI, Python, XGBoost, Portfolio, Hyderabad">
     <meta name="author" content="Anitha Eudulla">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Anitha Eudulla | Data Scientist Portfolio">
-    <meta property="og:description" content="Entry-level Data Scientist specializing in AI, ML, and NLP.">
+    <meta property="og:title" content="Anitha Eudulla | Data Scientist & AI Engineer">
+    <meta property="og:description"
+        content="Transforming raw data into business-critical intelligence through AI, Machine Learning, and Advanced Analytics.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anithaeudulla.github.io/">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Animated Background -->
-    <div class="bg-grid"></div>
-    <div class="bg-glow bg-glow-1"></div>
-    <div class="bg-glow bg-glow-2"></div>
-    <div class="bg-glow bg-glow-3"></div>
+    <!-- Topographic / Particle Canvas Background -->
+    <canvas id="topo-canvas"></canvas>
+    <div class="bg-noise"></div>
 
     <!-- Navigation -->
     <nav class="glass-nav" id="nav">
         <div class="container nav-content">
             <a href="#" class="logo">
-                <span class="logo-bracket">&lt;</span>AE<span class="logo-bracket">/&gt;</span>
+                <span class="logo-icon">📊</span>
+                <span class="logo-text"><span class="logo-bracket">&lt;</span>AE<span
+                        class="logo-bracket">/&gt;</span></span>
             </a>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#hero" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#competencies" class="nav-link">Expertise</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#projects" class="nav-link">Case Studies</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-right">
-                <a href="#contact" class="btn btn-nav">Hire Me</a>
+                <a href="#contact" class="btn btn-nav"><i data-lucide="sparkles"></i> Hire Me</a>
                 <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                     <span></span><span></span><span></span>
                 </button>
@@ -57,14 +61,14 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
+    <!-- Mobile Menu -->
     <div class="mobile-menu-overlay" id="mobile-menu">
         <ul class="mobile-nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#competencies">Expertise</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#projects">Case Studies</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -74,17 +78,21 @@
         <section id="hero" class="hero-section">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-badge">
+                    <div class="hero-badge" id="hero-badge">
                         <span class="badge-dot"></span>
-                        Available for Opportunities
+                        Open to Opportunities
                     </div>
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">Anitha Eudulla</span>
+                    <h1 class="hero-title" id="hero-title">
+                        Turning Data Into<br><span class="gradient-text">Business Decisions</span>
                     </h1>
-                    <p class="hero-role">
+                    <p class="hero-role" id="hero-role">
                         <span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
                     </p>
-                    <div class="hero-contact-links">
+                    <p class="hero-tagline" id="hero-tagline">I build <strong>ML models, predictive pipelines, and BI
+                            dashboards</strong>
+                        that drive measurable outcomes — from churn reduction to risk mitigation to revenue
+                        optimization.</p>
+                    <div class="hero-contact-links" id="hero-contacts">
                         <a href="mailto:anithaeudulla@gmail.com" class="hero-contact-item" aria-label="Email">
                             <i data-lucide="mail"></i> anithaeudulla@gmail.com
                         </a>
@@ -99,33 +107,32 @@
                             <i data-lucide="github"></i> GitHub
                         </a>
                     </div>
-                    <p class="hero-tagline">I architect intelligent systems through <strong>AI, Machine Learning,
-                            and Advanced Analytics</strong> — turning raw data into business impact.</p>
-                    <div class="hero-actions">
+                    <div class="hero-actions" id="hero-actions">
                         <a href="#projects" class="btn btn-primary">
-                            <i data-lucide="folder-open"></i> View Projects
+                            <i data-lucide="briefcase"></i> View Case Studies
                         </a>
                         <a href="#contact" class="btn btn-outline">
                             <i data-lucide="send"></i> Let's Connect
                         </a>
                     </div>
-                    <div class="hero-metrics">
-                        <div class="metric">
-                            <span class="metric-value">6+</span>
-                            <span class="metric-label">Projects</span>
-                        </div>
+                    <div class="hero-metrics" id="hero-metrics">
+                        <div class="metric"><span class="metric-value counter" data-target="10">0</span><span
+                                class="metric-label">Projects Delivered</span></div>
                         <div class="metric-divider"></div>
-                        <div class="metric">
-                            <span class="metric-value">3+</span>
-                            <span class="metric-label">Certifications</span>
-                        </div>
+                        <div class="metric"><span class="metric-value">3+</span><span
+                                class="metric-label">Certifications</span></div>
                         <div class="metric-divider"></div>
-                        <div class="metric">
-                            <span class="metric-value">AI/ML</span>
-                            <span class="metric-label">Focus Area</span>
-                        </div>
+                        <div class="metric"><span class="metric-value">AI/ML</span><span
+                                class="metric-label">Specialization</span></div>
+                        <div class="metric-divider"></div>
+                        <div class="metric"><span class="metric-value counter" data-target="5">0</span><span
+                                class="metric-label">Dashboards Built</span></div>
                     </div>
                 </div>
+            </div>
+            <div class="hero-scroll-indicator" id="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-line"></div>
             </div>
         </section>
 
@@ -134,51 +141,76 @@
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">About Me</span>
-                    <h2 class="section-title">Professional Summary</h2>
+                    <h2 class="section-title">Professional Profile</h2>
                 </div>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>I am an <strong>Entry-level Data Scientist and Data Analyst</strong> with a strong
-                            foundation in transforming complex data into meaningful business insights. Proficient
-                            in <strong>SQL, Python, Power BI, and Excel</strong>, I specialize in analyzing,
-                            visualizing, and modeling data to support data-driven decision-making.</p>
-                        <p>With hands-on experience in <strong>Machine Learning, Deep Learning, and Natural
-                                Language Processing (NLP)</strong>, I contribute to the end-to-end development of
-                            data solutions—from data cleaning and exploratory analysis to building predictive
-                            models and interactive dashboards—while continuously striving to deliver accurate,
-                            scalable, and impactful results.</p>
+                        <p>I am a <strong>Data Scientist and AI Engineer</strong> with a proven track record in
+                            designing end-to-end machine learning solutions that translate complex datasets into
+                            actionable business intelligence. I specialize in <strong>predictive modeling,
+                                customer analytics, risk assessment,</strong> and <strong>operational
+                                optimization</strong>
+                            across industries including telecom, fintech, retail, and education.</p>
+                        <p>With deep expertise in <strong>Python, SQL, XGBoost, Power BI, and NLP frameworks</strong>,
+                            I deliver production-ready ML pipelines, interactive BI dashboards, and AI-powered
+                            applications — all engineered for measurable business impact and scalability.</p>
+                        <div class="about-stats">
+                            <div class="about-stat">
+                                <span class="about-stat-value">82%+</span>
+                                <span class="about-stat-label">ML Model Accuracy</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-value">$6M+</span>
+                                <span class="about-stat-label">Projected Savings</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-value">7+</span>
+                                <span class="about-stat-label">ML Models Deployed</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="about-cards">
                         <div class="about-card">
                             <div class="about-card-icon"><i data-lucide="brain"></i></div>
-                            <h3>AI & Machine Learning</h3>
-                            <p>Model Development & Optimization</p>
+                            <div>
+                                <h3>Predictive Analytics & ML</h3>
+                                <p>Classification, regression, time-series forecasting, and ensemble methods</p>
+                            </div>
                         </div>
                         <div class="about-card">
                             <div class="about-card-icon"><i data-lucide="bar-chart-2"></i></div>
-                            <h3>Business Intelligence</h3>
-                            <p>Dashboards & Data Storytelling</p>
+                            <div>
+                                <h3>Business Intelligence</h3>
+                                <p>Executive dashboards, KPI tracking, and data-driven decision support</p>
+                            </div>
                         </div>
                         <div class="about-card">
                             <div class="about-card-icon"><i data-lucide="message-square"></i></div>
-                            <h3>NLP & Deep Learning</h3>
-                            <p>Text Analytics & Language Models</p>
+                            <div>
+                                <h3>NLP & AI Applications</h3>
+                                <p>Chatbots, text analytics, RAG systems, and language model integration</p>
+                            </div>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-icon"><i data-lucide="shield-check"></i></div>
+                            <div>
+                                <h3>Risk & Revenue Analytics</h3>
+                                <p>Credit scoring, churn prediction, revenue optimization, and cost reduction</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section">
+        <!-- Core Competencies & Tech Stack -->
+        <section id="competencies" class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">What I Know</span>
-                    <h2 class="section-title">Technical Expertise</h2>
+                    <span class="section-tag">Core Expertise</span>
+                    <h2 class="section-title">Technical Arsenal</h2>
                 </div>
-                <div class="skills-grid" id="skills-grid">
-                    <!-- Dynamic Content -->
-                </div>
+                <div class="skills-grid" id="skills-grid"></div>
             </div>
         </section>
 
@@ -186,25 +218,29 @@
         <section id="experience" class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">My Journey</span>
-                    <h2 class="section-title">Work Experience</h2>
+                    <span class="section-tag">Career</span>
+                    <h2 class="section-title">Professional Experience</h2>
                 </div>
-                <div class="timeline" id="experience-timeline">
-                    <!-- Dynamic Content -->
-                </div>
+                <div class="timeline" id="experience-timeline"></div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Projects / Case Studies Section -->
         <section id="projects" class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">My Work</span>
+                    <span class="section-tag">Case Studies</span>
                     <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Each project engineered for measurable business impact — from concept
+                        through deployment.</p>
                 </div>
-                <div class="projects-grid" id="projects-grid">
-                    <!-- Dynamic Content -->
+                <div class="project-filters" id="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                    <button class="filter-btn" data-filter="bi">Business Intelligence</button>
+                    <button class="filter-btn" data-filter="ai">AI / NLP</button>
                 </div>
+                <div class="projects-grid" id="projects-grid"></div>
             </div>
         </section>
 
@@ -239,75 +275,77 @@
             </div>
         </section>
 
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content glass-card">
+                    <div class="cta-glow"></div>
+                    <h2 class="cta-title">Ready to transform your data<br>into <span class="gradient-text">competitive
+                            advantage?</span></h2>
+                    <p class="cta-desc">Let's discuss how data science and AI can drive measurable results for your
+                        organization.</p>
+                    <div class="cta-actions">
+                        <a href="mailto:anithaeudulla@gmail.com" class="btn btn-primary btn-lg"><i
+                                data-lucide="mail"></i> Get In Touch</a>
+                        <a href="https://www.linkedin.com/in/anitha-eudulla-9418291b3/" target="_blank"
+                            class="btn btn-outline btn-lg"><i data-lucide="linkedin"></i> Connect on LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Let's Talk</span>
-                    <h2 class="section-title">Get In Touch</h2>
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title">Let's Work Together</h2>
                 </div>
                 <div class="contact-grid">
                     <div class="contact-info glass-card">
-                        <h3>Let's build something great together.</h3>
-                        <p class="contact-desc">I'm always open to discussing new projects, creative ideas, or
-                            opportunities to be part of your vision.</p>
+                        <h3>Open for opportunities.</h3>
+                        <p class="contact-desc">Whether you're looking for a data scientist, ML engineer, or analytics
+                            consultant — I'd love to hear about your challenges.</p>
                         <div class="contact-methods">
                             <a href="mailto:anithaeudulla@gmail.com" class="contact-method">
                                 <div class="contact-method-icon"><i data-lucide="mail"></i></div>
-                                <div>
-                                    <span class="contact-method-label">Email</span>
-                                    <span class="contact-method-value">anithaeudulla@gmail.com</span>
-                                </div>
+                                <div><span class="contact-method-label">Email</span><span
+                                        class="contact-method-value">anithaeudulla@gmail.com</span></div>
                             </a>
                             <a href="https://www.linkedin.com/in/anitha-eudulla-9418291b3/" target="_blank"
                                 class="contact-method">
                                 <div class="contact-method-icon"><i data-lucide="linkedin"></i></div>
-                                <div>
-                                    <span class="contact-method-label">LinkedIn</span>
-                                    <span class="contact-method-value">Anitha Eudulla</span>
-                                </div>
+                                <div><span class="contact-method-label">LinkedIn</span><span
+                                        class="contact-method-value">Anitha Eudulla</span></div>
                             </a>
                             <a href="https://github.com/AnithaEudulla" target="_blank" class="contact-method">
                                 <div class="contact-method-icon"><i data-lucide="github"></i></div>
-                                <div>
-                                    <span class="contact-method-label">GitHub</span>
-                                    <span class="contact-method-value">AnithaEudulla</span>
-                                </div>
+                                <div><span class="contact-method-label">GitHub</span><span
+                                        class="contact-method-value">AnithaEudulla</span></div>
                             </a>
                             <div class="contact-method">
                                 <div class="contact-method-icon"><i data-lucide="phone"></i></div>
-                                <div>
-                                    <span class="contact-method-label">Phone</span>
-                                    <span class="contact-method-value">+91 9390857402</span>
-                                </div>
+                                <div><span class="contact-method-label">Phone</span><span
+                                        class="contact-method-value">+91 9390857402</span></div>
                             </div>
                             <div class="contact-method">
                                 <div class="contact-method-icon"><i data-lucide="map-pin"></i></div>
-                                <div>
-                                    <span class="contact-method-label">Location</span>
-                                    <span class="contact-method-value">Hyderabad, India</span>
-                                </div>
+                                <div><span class="contact-method-label">Location</span><span
+                                        class="contact-method-value">Hyderabad, India</span></div>
                             </div>
                         </div>
                     </div>
                     <div class="contact-form-wrap glass-card">
                         <form id="contact-form" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" placeholder="Your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" placeholder="you@example.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" placeholder="Tell me about your project..." rows="5"
-                                    required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-full">
-                                <i data-lucide="send"></i> Send Message
-                            </button>
+                            <div class="form-group"><label for="name">Name</label><input type="text" id="name"
+                                    placeholder="Your name" required></div>
+                            <div class="form-group"><label for="email">Email</label><input type="email" id="email"
+                                    placeholder="you@example.com" required></div>
+                            <div class="form-group"><label for="message">Message</label><textarea id="message"
+                                    placeholder="Tell me about your project or opportunity..." rows="5"
+                                    required></textarea></div>
+                            <button type="submit" class="btn btn-primary btn-full"><i data-lucide="send"></i> Send
+                                Message</button>
                         </form>
                     </div>
                 </div>
@@ -318,9 +356,9 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <a href="#" class="logo footer-logo">
-                    <span class="logo-bracket">&lt;</span>AE<span class="logo-bracket">/&gt;</span>
-                </a>
+                <a href="#" class="logo footer-logo"><span class="logo-bracket">&lt;</span>AE<span
+                        class="logo-bracket">/&gt;</span></a>
+                <p class="footer-tagline">Data Scientist & AI Engineer — Hyderabad, India</p>
                 <div class="footer-socials">
                     <a href="mailto:anithaeudulla@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
                     <a href="https://www.linkedin.com/in/anitha-eudulla-9418291b3/" target="_blank"
@@ -328,20 +366,19 @@
                     <a href="https://github.com/AnithaEudulla" target="_blank" aria-label="GitHub"><i
                             data-lucide="github"></i></a>
                 </div>
-                <p class="footer-copy">&copy; Anitha Eudulla. All rights reserved.</p>
+                <p class="footer-copy">&copy; 2026 Anitha Eudulla. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to top -->
-    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
-        <i data-lucide="arrow-up"></i>
-    </button>
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top"><i data-lucide="arrow-up"></i></button>
 
-    <script src="script.js?v=2"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <!-- Custom cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+    <script src="script.js?v=4"></script>
+    <script>lucide.createIcons();</script>
 </body>
 
 </html>
