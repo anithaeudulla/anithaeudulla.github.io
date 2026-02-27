@@ -507,24 +507,21 @@ function initGSAP() {
     });
 
     // CTA section parallax feel
-    gsap.from('.cta-content', {
-        y: 60, opacity: 0, duration: 1,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: '.cta-section', start: 'top 80%' }
-    });
+    gsap.fromTo('.cta-content',
+        { y: 60, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.cta-section', start: 'top 90%' } }
+    );
 
     // Contact section
-    gsap.from('.contact-info', {
-        x: -50, opacity: 0, duration: 0.8,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: '.contact-grid', start: 'top 80%' }
-    });
+    gsap.fromTo('.contact-info',
+        { x: -30, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: '.contact-grid', start: 'top 90%' } }
+    );
 
-    gsap.from('.contact-form-wrap', {
-        x: 50, opacity: 0, duration: 0.8,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: '.contact-grid', start: 'top 80%' }
-    });
+    gsap.fromTo('.contact-form-wrap',
+        { x: 30, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: '.contact-grid', start: 'top 90%' } }
+    );
 
     // Parallax-like section tags
     gsap.utils.toArray('.section-tag').forEach(tag => {
@@ -671,4 +668,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }, 500);
+
+    // Ensure ScrollTrigger parses new document height after all resources load
+    window.addEventListener('load', () => {
+        ScrollTrigger.refresh();
+    });
 });
